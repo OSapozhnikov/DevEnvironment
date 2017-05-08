@@ -1,0 +1,34 @@
+# vagrant files
+/.vagrant/
+
+# projects files
+/www/html/
+
+# databases backups
+*.sql
+
+# ignore log files and databases
+*.log
+#*.sql
+*.sqlite
+*.mmdb
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.idea
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
