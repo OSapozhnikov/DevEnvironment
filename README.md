@@ -1,7 +1,7 @@
 # README #
 
 ### Default project adress ###
-* BinaryUno: devel.mysite.com  
+* ProjectName: devel.mysite.com  
 * etc  
 
 ### Hosts directives ###
