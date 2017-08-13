@@ -31,7 +31,7 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
 # Config locales and timezone
 locale-gen en_US.UTF-8
-timedatectl set-timezone Asia/Jerusalem
+timedatectl set-timezone Europe/Kiev
 
 # Install mysql
 export DEBIAN_FRONTEND=noninteractive
@@ -41,8 +41,6 @@ echo debconf mysql-server/root_password_again password $ROOTPASSWD | debconf-set
 apt-get -y install mysql-server mysql-client
 
 # Config web server
-a2dismod php7.1
-a2enmod php5.6
 a2enmod headers
 a2enmod rewrite
 phpenmod mcrypt
