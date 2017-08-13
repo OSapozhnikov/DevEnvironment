@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 sudo su
 # Install NodeJS
-apt install -y build-essential
-curl -sLf -o /dev/null 'https://deb.nodesource.com/node_6.x/dists/xenial/Release'
-curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-echo 'deb https://deb.nodesource.com/node_6.x xenial main' > /etc/apt/sources.list.d/nodesource.list
-echo 'deb-src https://deb.nodesource.com/node_6.x xenial main' >> /etc/apt/sources.list.d/nodesource.list
+curl -sL https://deb.nodesource.com/setup_7.x -o nodesource_setup.sh
+bash nodesource_setup.sh
 apt update && apt install -y nodejs
+apt install -y nodejs
+apt install -y build-essential
 
 # Install PhantomJS
 apt install -y chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
@@ -20,4 +19,4 @@ rm -rf phantomjs-2.1.1-linux-x86_64.tar.bz2
 # Install CasperJS
 npm install -g casperjs
 # Clear box
-apt-get autoremove -y
+apt autoremove -y
