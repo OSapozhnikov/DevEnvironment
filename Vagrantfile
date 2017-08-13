@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
         vb.name = "DevEnv"
             vb.gui = false
             vb.cpus = "2"
-            vb.memory = "1024"
+            vb.memory = "2048"
             vb.customize ["modifyvm", :id, "--ioapic", "on"]
             vb.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
         end
