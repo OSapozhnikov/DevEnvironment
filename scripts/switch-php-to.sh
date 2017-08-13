@@ -18,9 +18,9 @@ switchToSeven () {
 }
 case $1 in
     5)
-    switchtofive;;
+    switchToFive;;
     7)
-    switchtoseven;;
+    switchToSeven;;
     *)
     echo "Usage: $0 [5 | 7]"
 esac
