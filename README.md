@@ -1,5 +1,8 @@
 # README #
 
+Please install Vagrant vbguest plugin for simple work with "synced_folder":  
+>`vagrant plugin install vagrant-vbguest`  
+
 ### Default project adress ###
 * ProjectName: devel.mysite.com  
 * etc  
@@ -9,7 +12,7 @@ For work you need add this directives in host file:
 >192.168.25.10 devel.mysite.com www.devel.mysite.com  
 
 ### Configuration ###
-* Apache 2.4.7, MySQL 5.6, PHP 5.6/7.1  
+* Apache 2.4.7, MySQL 5.6, PHP 5.6/7.1, NodeJS 7  
 * Database configuration: User - root, passwd - 12345678  
 
 Forwarding ports, additional(If need please enable in Vagrantfile):  
@@ -22,8 +25,11 @@ Forwarding ports, additional(If need please enable in Vagrantfile):
 * Projects must be located in the "www" directory
 
 Repository for deployment:
->git clone git@github.com:Your/Repo.git  
+>`git clone git@github.com:Your/Repo.git  `
 
+### How to start ###  
+In directory:  
+>`vagrant up`
 
 ### Use 'vagrant ssh' on Windows ###
 You can use to PuTTY(KiTTY, GIT bash or other SSH clients)  
@@ -32,15 +38,21 @@ Port: 2222
 Login: vagrant  
 Password: vagrant  
 GIT Bash:  
->ssh -p 2222 vagrant@127.0.0.1
+>`ssh -p 2222 vagrant@127.0.0.1`
 
 ### Use xDebug ###
 In /home/vagrant/scripts directory is xdebug.sh script. Run this script for on or off xDebug mode.  
 In Vagrant:  
->sudo sh ./home/vagrant/scripts/xdebug.sh 
+>`sudo sh ./home/vagrant/scripts/xdebug.sh` 
 
 You will see the message:  
 >"xDEBAG mode ON" or "xDEBAG mode OFF"
+
+### Swich PHP version ###
+In Vagrant:  
+>`/usr/bin/switch-php-to X`  
+
+Where X: 5 or 7  
 
 ### Additional settings ###
 If needed please Manual Config for your Project in Vagrant file:
