@@ -19,7 +19,7 @@ sed -i 's/^max_execution_time = 30/max_execution_time = 60/' /etc/php/5.6/apache
 sed -i 's/^; max_input_vars = 1000/max_input_vars = 2000/' /etc/php/5.6/apache2/php.ini;
 
 # Install PHP-7.1
-apt install -y php7.1 php7.1-curl php7.1-mcrypt php7.1-cli php7.1-gd php7.1-intl php7.1-xmlrpc php7.1-mysqlnd php7.1-common php7.1-mbstring php-xdebug
+apt install -y php7.1 php7.1-curl php7.1-mcrypt php7.1-cli php7.1-gd php7.1-intl php7.1-xmlrpc php7.1-mysqlnd php7.1-common php7.1-mbstring php7.0-zip php-xdebug
 echo " -> Update PHP conf"
 sed -i 's/^post_max_size = 8M/post_max_size = 64M/' /etc/php/7.1/apache2/php.ini;
 sed -i 's/^upload_max_filesize = 2M/upload_max_filesize = 64M/' /etc/php/7.1/apache2/php.ini;
